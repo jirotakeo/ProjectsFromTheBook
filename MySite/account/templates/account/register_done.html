@@ -1,0 +1,7 @@
+{% extends 'blog/base.html' %}
+
+{% block title %} Регистрация {% endblock %}
+{% block content %}
+    <h1>Регистрация прошла успешно</h1>
+    <p>Можете <a href="{% url 'account:login' %}">авторизоваться</a></p>
+{% endblock %}

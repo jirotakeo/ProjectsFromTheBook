@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+{% block title %} Dashboard {% endblock %}
+{% block content %}
+    {% with total_images_created=request.user.images_created.count %}
+    <h1 class="title">Добро пожаловать</h1>
+
+    {{ total_images_created }} image {{ total_images_created|pluralize }}
+    {% endwith %}
+    <p>Перетащите следующую кнопку на панель закладок, чтобы добавить изображения в закладки с других сайтов
+        <a href="javascript:{% include 'bookmarklet_launcher.js' %}" class="button">Добавить</a>
+    </p>
+
+<p class="paragraph">Приветствуем {{ request.user.first_name }},
+     Вы можете <a href="{% url 'account:edit' %}">настроить профиль</a> или <a href="{% url 'account:password_change' %}">сменить пароль</a>
+    </p>
+{% endblock %}

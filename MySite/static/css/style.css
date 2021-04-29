@@ -1,0 +1,47 @@
+.title {
+    text-align: center;
+}
+
+.navbar {
+    background-color: #FF3333;
+}
+
+.in_out {
+    color: #FFFF33;
+}
+
+.forms {
+    display: inline-block;
+}
+/* forms */
+label {
+    float:left;
+    clear:both;
+    color:#333;
+    margin-bottom:4px;
+}
+input, textarea {
+    clear:both;
+    float:left;
+    margin:0 0 10px;
+    background:#CCCCCC;
+    border:0;
+    padding:6px 10px;
+    font-size:12px;
+}
+input[type=submit] {
+    font-weight:bold;
+    background:#FF3333;
+    color:#fff;
+    padding:10px 20px;
+    font-size:14px;
+    text-transform:uppercase;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+.errorlist {
+    color:#cc0033;
+    float:left;
+    clear:both;
+    padding-left:10px;
+}

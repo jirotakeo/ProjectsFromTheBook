@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+{% block title %} logIn {% endblock %}
+{% block content %}
+    <h1>Авторизация</h1>
+    {% if form.errors %}
+        <p>Проверьте логин и пароль</p>
+    {% else %}
+        <p>Заполните поля</p>
+    {% endif %}
+    <div class="forms" >
+    <form action="{% url 'account:login' %}" method="post">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <input type="hidden" name="text" value="{{ next }}"/>
+        <p><input type="submit" value="Войти"></p>
+    </form>
+    </div>
+    <div class="resetorreg">
+    <p><a href="{% url 'account:password_reset' %}">Сбросить пароль?</a> или <a href="{% url 'account:register' %}">зарегистрироваться</a></p>
+    </div>
+{% endblock %}
